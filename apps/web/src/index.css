@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 28% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 15%;
+    --primary: 198 82% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 16% 93%;
+    --secondary-foreground: 215 28% 15%;
+    --muted: 210 16% 94%;
+    --muted-foreground: 215 12% 42%;
+    --accent: 84 60% 44%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 14% 88%;
+    --input: 214 14% 84%;
+    --ring: 198 82% 40%;
+    --radius: 0.625rem;
+    --brand-blue: 198 82% 46%;
+    --brand-green: 84 60% 46%;
+    --brand-yellow: 45 95% 52%;
+    --ink: 215 30% 14%;
+  }
+  .dark {
+    --background: 215 28% 10%;
+    --foreground: 0 0% 96%;
+    --card: 215 26% 13%;
+    --card-foreground: 0 0% 96%;
+    --popover: 215 26% 13%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 198 82% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 20% 18%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 14% 65%;
+    --accent: 84 60% 46%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 18% 22%;
+    --input: 215 18% 24%;
+    --ring: 198 82% 50%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: 'Manrope', 'Inter', sans-serif;
+}
+
+::selection {
+  background: hsl(var(--brand-blue) / 0.2);
+}
+
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
